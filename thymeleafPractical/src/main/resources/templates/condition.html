@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+<!-- Elvis Operator -->
+	<h1>Use is <span th:style="${isActive} ? 'color:green' : 'color:red'" th:text="${isActive} ? 'ACTIVE' : 'NOT ACTIVE'"></span></h1>
+
+		<!-- if/else  -->
+
+		<h1 th:if="${gender}=='M'">Male</h1>
+		<h1 th:unless="${gender}=='M'">Female</h1>
+		<!-- Switch -->
+		
+		<div th:switch="${#lists.size(mylist)}">
+		<h1 th:case="'0'">List contain Zero element</h1>
+		<h1 th:case="'1'">List contain one element</h1>
+		<h1 th:case="*">List contain more the one element</h1>
+		
+		
+		</div>
+</body>
+</html>
