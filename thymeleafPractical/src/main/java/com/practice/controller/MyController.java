@@ -52,4 +52,17 @@ public class MyController {
 		model.addAttribute("substitle",LocalDateTime.now().toString());
 		return "service";
 	}
+	//for new about
+	@GetMapping("/newabout")
+	public String newAbout()
+	{
+		return "aboutNew";
+	}
+	//for contact
+	@GetMapping("/contact")
+	public String contact()
+	{
+		return "contact";
+	}
+	
 }
