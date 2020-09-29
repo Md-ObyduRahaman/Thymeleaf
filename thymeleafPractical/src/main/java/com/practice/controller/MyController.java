@@ -2,6 +2,7 @@ package com.practice.controller;
 
 
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -47,6 +48,8 @@ public class MyController {
 	//handler for including fragments
 	@GetMapping("/service")
 	public String servicesHandler(Model model) {
+		model.addAttribute("title","I Like to eat somosa");
+		model.addAttribute("substitle",LocalDateTime.now().toString());
 		return "service";
 	}
 }
